@@ -55,7 +55,7 @@ const kittyPrompts = {
     // },
     // ...etc]
 
-    const result = kitties.map(kitty => ({ ...kitty, age: kitty.age + 2 }));
+    const result = kitties.map(kitty => Object.assign({}, kitty, {age: kitty.age + 2}));
     return result;
 
     // Annotation:
@@ -822,7 +822,7 @@ const dinosaurPrompts = {
         return ageTotal;
       });
       const valObj = {};
-      const avgAge = Math.floor(ageTotal / movie.cast.length)
+      const avgAge = Math.floor(ageTotal / movie.cast.length);
       valObj[movie.title] = avgAge;
       !Object.keys(acc).includes(movie.director) ? acc[movie.director] = valObj
         : acc[movie.director][movie.title] = avgAge;

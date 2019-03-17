@@ -14,13 +14,12 @@ const context = {
 
     const ship = new SpaceProbe('voyager', 'classy');
 
-
     // What is the value of `this` when we call ship.fly()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // This within an arrow function points to the parent scope.
   },
 
   exerciseB() {
@@ -30,11 +29,11 @@ const context = {
     }
     
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // This in a function points to the window.
   },
 
   exerciseC() {
@@ -49,11 +48,11 @@ const context = {
     el.addEventListener('click', car.getInfo);
 
     // What is the value of `this` when a user clicks on our element and car.getInfo() is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'el';
     return result;
 
     // Annotation: 
-    // Write your annotation here as a comment
+    // This is set to the element the event listeners fired from.
   },
 
   exerciseD() {
@@ -72,14 +71,14 @@ const context = {
     var breed = dog.getBreed();
 
     // What is the value of `this` when we call breed()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation: 
     // Write your annotation here as a comment
   },
 
-  exerciseE() {
+  exerciseE() {  
 
     const fn = () => {
       value = 21;
@@ -88,14 +87,14 @@ const context = {
 
 
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation: 
     // Write your annotation here as a comment
   },
 
-  exerciseF() {
+  exerciseF() {  
     class Hero {
       constructor(name, power, canFly = false) {
         this.name = name;
@@ -111,14 +110,14 @@ const context = {
     const storm = new Hero('Ororo', 'weather control', true);
 
     // What is the value of `this` when we call storm.identifyHero()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'instance of Hero';
     return result;
 
     // Annotation: 
     // Write your annotation here as a comment
   },
 
-  exerciseG() {
+  exerciseG() {  //is it cus it's in two functions and loses sight of the obj?
     class Game {
       constructor(title) {
         this.title = title;
@@ -139,7 +138,7 @@ const context = {
 
 
     // What is the value of `this` when we call monopoly.restart()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation: 
@@ -159,7 +158,7 @@ const context = {
     obj.method();
 
     // What is the value of `this` when we call obj.arrowFunction()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'obj';
     return result;
 
     // Annotation: 
@@ -182,7 +181,7 @@ const context = {
     }, poets);
 
     // What is the value of `this` that gets returned on each iteration of poets.map()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'poets';
     return result;
 
     // Annotation: 
@@ -196,7 +195,7 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our #btn element and the callback is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'el';
     return result;
 
     // Annotation: 
